@@ -58,7 +58,7 @@ const dataProjects = [
     name: 'Taguara Digital Portfolio',
     image: '/images/projects/portfolio8.jpg',
     text: 'Portfolio de la agencia Taguara Digita desarrollado con React, Styled-component, Router, react scroll',
-    date: '2020',
+    date: '2021',
     category: {
       tag: 'React.js',
       color: '#0000ff',
