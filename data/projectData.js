@@ -13,7 +13,7 @@ const dataProjects = [
       tag: 'Next JS',
       color: '#0000ff',
     },
-    src: 'https://github.com/YoussefSabbagh/nlp-consulting.git',
+    src: 'https://github.com/YoussefSabbagh/',
     link: {
       url: 'https://nextlevel.partners/',
       text: 'Demo - Live',
@@ -30,7 +30,7 @@ const dataProjects = [
       tag: 'Next JS',
       color: '#0000ff',
     },
-    src: 'https://github.com/YoussefSabbagh/nlp-consulting.git',
+    src: 'https://github.com/YoussefSabbagh/',
     link: {
       url: 'https://maria-desserts.vercel.app/',
       text: 'Demo - Live',
@@ -47,6 +47,7 @@ const dataProjects = [
       tag: 'React JS',
       color: '#0000ff',
     },
+    src: 'https://github.com/YoussefSabbagh/',
     link: {
       url: 'https://youyoutoys-frontend.vercel.app',
       text: 'Demo - Live',
@@ -63,6 +64,7 @@ const dataProjects = [
       tag: 'React.js',
       color: '#0000ff',
     },
+    src: 'https://github.com/YoussefSabbagh/',
     link: {
       url: 'https://tg-portfolio-react.herokuapp.com/',
       text: 'Lo esta viendo',
@@ -127,6 +129,7 @@ const dataProjects = [
       tag: 'WordPress',
       color: '#ff00ff',
     },
+    src: 'https://github.com/YoussefSabbagh/',
     link: {
       url: 'http://dbbkositas.epizy.com',
       text: 'Demo - Live',
@@ -177,7 +180,7 @@ const dataProjects = [
       tag: 'WordPress',
       color: '#ff00ff',
     },
-    src: '',
+    src: 'https://github.com/YoussefSabbagh/',
     link: {
       url: 'http://salalectura.epizy.com/',
       text: 'Demo - Live',
