@@ -22,7 +22,7 @@ const ProductCard = ({ data }) => {
             {data.name}
           </div>
           <p className="text-gray-700 text-base mb-4 summary">{data.text} </p>
-          <Link href="/project/1" passHref>
+          <Link href={`/project/${data.id}`} passHref>
             <a className="bg-purple text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-purple">
               Learn More
             </a>

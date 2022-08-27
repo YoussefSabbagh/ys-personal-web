@@ -43,7 +43,7 @@ const AboutSection = () => {
           </div>
           <div className="flex justify-center space-x-4 mx-auto mb-20">
             <span className="text-center flex justify-center items-center space-x-2 cursor-pointer bg-yellow-700 px-4 py-2 rounded-full hover:text-white hover:bg-purple max-w-max">
-              <a download="" href="/pdfs/ys_cv.pdf">
+              <a download href="/pdfs/ys_cv.pdf">
                 Download CV
                 <FaFileDownload className="md:text-xl lg:text-2xl inline ml-2" />
               </a>
