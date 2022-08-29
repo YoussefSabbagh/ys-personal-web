@@ -1,7 +1,6 @@
 import ProductCard from './productCard';
-import dataProjects from '../data/projectData';
 
-const Portfolio = () => {
+const Portfolio = ({ projects }) => {
   return (
     <section id="portfolio" className="w-full text-center">
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center pt-12">
@@ -12,8 +11,8 @@ const Portfolio = () => {
             <span className="text-yellow-700"> my projects</span>
           </h2>
           <div className="container mx-auto grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 py-8">
-            {dataProjects.map((project) => {
-              return <ProductCard key={project.id} data={project} />;
+            {projects.map((project) => {
+              return <ProductCard key={project.projectId} data={project} />;
             })}
           </div>
         </div>

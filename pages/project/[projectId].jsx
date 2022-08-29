@@ -1,45 +1,57 @@
 import Link from 'next/link';
 import moment from 'moment';
-import { getContentFragment } from '../../services/utils/contentFragment';
+import { RichText } from '@graphcms/rich-text-react-renderer';
 import { getProjectById } from '../../services/projects';
 
 const ProjectDetails = ({ project }) => {
   return (
-    <section className="bg-gradient-to-tl from-yellow-500/60 via-black/40 to-yellow-500/60 relative overflow-hidden h-screen">
-      <div className="container mx-auto h-screen pt-32 md:pt-0 px-6 z-10 flex items-center justify-between">
-        <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row justify-between items-center relative">
+    <section className="bg-gradient-to-tl from-yellow-500/60 via-black/40 to-yellow-500/60 relative pt-32">
+      <div className="container mx-auto min-h-[calc(100vh-var(--header-height))]  md:pt-0 px-6 z-10 flex flex-col items-center">
+        <h1 className="font-light text-center text-4xl lg:text-5xl text-gray-700 mb-8">
+          {project.name}
+        </h1>
+        <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row justify-between items-center lg:items-start relative">
           <div className="w-full mb-16 md:mb-8 text-center lg:text-left">
-            <h2 className="font-light font-sans text-center lg:text-left text-5xl lg:text-8xl md:mt-0 mb-8 text-red-500">
-              under contruction
-            </h2>
-            <h1 className="font-light font-sans text-center lg:text-left text-4xl lg:text-5xl md:mt-0 text-gray-700">
-              {project.name}
-            </h1>
-            <div className="font-light font-sans text-left text-xl mb-4 text-gray-700">
-              <p className="">Stack : {project.categoria}</p>
-              <p className=""> {project.desc}</p>
-
-              <p className="">
-                Fecha: {moment(project.fechacreatedAt).format('YYYY')}
+            <div className="text-xl mb-4 pr-4">
+              <p className="text-2xl text-center mb-4 font-semibold">
+                Description
               </p>
+              <p className="font-semibold mb-4"> {project.desc}</p>
+              <div className="font-light text-left text-xl mt-8 lg:mt-0 mb-4 text-gray-700">
+                <p className=""> {project.categoria}</p>
+
+                <p className="">
+                  Fecha: {moment(project.fecha).format('MMM YYYY')}
+                </p>
+              </div>
+              <RichText content={project.descripcion.raw.children} />
             </div>
 
-            {project.descripcion.raw.children.map((typeObj, index) => {
-              const children = typeObj.children.map((item, itemindex) =>
-                getContentFragment(itemindex, item.text, item)
-              );
-
-              return getContentFragment(index, children, typeObj, typeObj.type);
-            })}
-
-            <Link href="/" replace>
-              <a className="px-2 py-2 w-36 mt-16 font-light transition ease-in duration-200 hover:bg-yellow-700 border-2 text-lg border-gray-700 bg-yellow-500 focus:outline-none">
-                Go back Homepage
-              </a>
-            </Link>
+            <div className="mt-10 text-center">
+              <Link href="/#portfolio" replace>
+                <a className="px-2 py-2 w-36 font-light transition ease-in duration-200 hover:bg-yellow-700 border-2 text-lg border-gray-700 bg-yellow-500 focus:outline-none">
+                  Regresar
+                </a>
+              </Link>
+            </div>
           </div>
-          <div className="block w-full mx-auto md:mt-0 relative max-w-md lg:max-w-2xl">
-            <img src={project.image.url} />
+
+          <div className="">
+            <div className="bg-gray-500 flex flex-col justify-center items-center py-2">
+              <p>Main tools used in the project</p>
+              <div className="flex justify-center items-center space-x-4">
+                {project.icons.map((icon, i) => {
+                  return (
+                    <div key={i - project.name} className="block w-10 h-10">
+                      <img src={icon} />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="block w-full mx-auto md:mt-0 relative max-w-md lg:max-w-2xl">
+              <img src={project.image.url} />
+            </div>
           </div>
         </div>
       </div>
@@ -47,7 +59,7 @@ const ProjectDetails = ({ project }) => {
   );
 };
 
-export async function getServerSideProps(context) {
+export const getServerSideProps = async (context) => {
   const { params } = context;
   const { projectId } = params;
 
@@ -56,6 +68,6 @@ export async function getServerSideProps(context) {
   return {
     props: { project },
   };
-}
+};
 
 export default ProjectDetails;

@@ -8,21 +8,21 @@ const ProductCard = ({ data }) => {
       <div
         className="h-48 flex-none bg-cover rounded-t text-center overflow-hidden"
         style={{
-          backgroundImage: `url(${data.image})`,
+          backgroundImage: `url(${data.image.url})`,
           objectFit: 'cover',
         }}
         title={data.name}
       ></div>
-      <div className="border-r border-b border-l border-gray-400  bg-white rounded-b p-4 flex flex-col justify-between leading-normal">
+      <div className=" text-gray-600 border-r border-b border-l border-gray-400  bg-white rounded-b p-4 flex flex-col justify-between leading-normal">
         <div className="mb-8">
-          <p className="text-sm text-gray-600 flex items-center space-x-2">
-            <span>{data.icon}</span> <span>{data.category.tag}</span>
+          <p className="text-xs  flex items-center space-x-2">
+            <span>{data.categoria}</span>
           </p>
-          <div className="text-gray-900 font-bold text-xl mb-2">
+          <div className="font-title text-gray-700 font-bold text-xl my-2">
             {data.name}
           </div>
-          <p className="text-gray-700 text-base mb-4 summary">{data.text} </p>
-          <Link href={`/project/${data.id}`} passHref>
+          <p className="text-base mb-4 summary">{data.desc} </p>
+          <Link href={`/project/${data.projectId}`} passHref>
             <a className="bg-purple text-white px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-purple">
               Learn More
             </a>
