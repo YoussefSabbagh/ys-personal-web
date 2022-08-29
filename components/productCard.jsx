@@ -35,7 +35,7 @@ const ProductCard = ({ data }) => {
             </a>
           </p>
           <p className=" text-purple text-center flex justify-center items-center space-x-2 cursor-pointer bg-yellow-500 px-4 py-2 rounded-full hover:text-yellow-500 hover:bg-purple">
-            <a href={data.link.url} target="_blank" rel="noopener noreferrer">
+            <a href={data.link} target="_blank" rel="noopener noreferrer">
               <MdScreenSearchDesktop size={32} className="text-center inline" />
               Life Demo
             </a>

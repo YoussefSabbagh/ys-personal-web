@@ -1,4 +1,3 @@
-import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import ContactForm from '../../components/contactForm';
 const Contact = () => {
