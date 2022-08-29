@@ -41,7 +41,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="headerLink">
-            <Link href="#skills">
+            <Link href="/#skills">
               <a className="">Skills</a>
             </Link>
           </li>
@@ -51,7 +51,7 @@ const Header = () => {
             </Link>
           </li>
           <li className="headerLink">
-            <Link href="#qualification">
+            <Link href="/#qualification">
               <a className="">Qualifications</a>
             </Link>
           </li>
