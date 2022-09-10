@@ -69,7 +69,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="shadow-lg shadow-yellow-700 py-12">
+    <div className="shadow-sm shadow-yellow-700 p-8">
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -84,10 +84,7 @@ const ContactForm = () => {
 
       <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
         <div className="flex items-center">
-          <label
-            htmlFor="user_name"
-            className=" w-[150px] auto text-right mr-2"
-          >
+          <label htmlFor="user_name" className=" mr-2">
             Name:
           </label>
           <input
@@ -98,7 +95,7 @@ const ContactForm = () => {
         </div>
         <p className="text-sm text-danger mb-2">{errors.user_name?.message}</p>
         <div className="flex items-center">
-          <label htmlFor="subject" className=" w-[150px] auto text-right mr-2">
+          <label htmlFor="subject" className=" mr-2">
             Subject:
           </label>
           <input
@@ -109,7 +106,7 @@ const ContactForm = () => {
         </div>
         <p className="text-sm text-danger mb-2">{errors.subject?.message}</p>
         <div className="flex items-center">
-          <label htmlFor="email" className=" w-[150px] auto text-right mr-2">
+          <label htmlFor="email" className=" mr-2">
             Email:
           </label>
           <input
@@ -120,7 +117,7 @@ const ContactForm = () => {
         </div>
         <p className="text-sm text-danger mb-2">{errors.email?.message}</p>
         <div className="flex items-center">
-          <label htmlFor="messaje" className=" w-[150px] auto text-right mr-2">
+          <label htmlFor="messaje" className=" mr-2">
             Messaje:
           </label>
           <textarea
@@ -135,7 +132,7 @@ const ContactForm = () => {
         {!isSending && (
           <button
             type="submit"
-            className="px-4 py-2 w-1/3 mx-auto mt-4 bg-yellow-700 text-white hover:bg-danger rounded-md"
+            className="px-4 py-2 w-1/3 mx-auto mt-4 bg-yellow-700 text-white hover:bg-purple rounded-md"
           >
             Submit
           </button>
