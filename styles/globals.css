@@ -60,7 +60,7 @@
   }
 
   .socialIcons {
-    @apply rounded-full shadow-md shadow-yellow-700 p-6 cursor-pointer hover:scale-105 hover:bg-yellow-700 ease-in duration-300;
+    @apply rounded-full shadow-md shadow-yellow-700 p-6 cursor-pointer hover:scale-105 hover:bg-purple hover:text-white ease-in duration-300;
   }
 
   .timeline-img {

@@ -48,6 +48,12 @@ module.exports = {
         },
         dark: '#212529',
       },
+      backgroundImage: {
+        'hero-pattern':
+          "linear-gradient(to right bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('/images/illustrations/hero1.svg')",
+        'about-pattern':
+          "linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/illustrations/about1.svg')",
+      },
     },
   },
   plugins: [],

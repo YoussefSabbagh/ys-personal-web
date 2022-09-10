@@ -3,7 +3,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="w-full text-center bg-gradient-to-tl from-black/80 via-yellow-500/20 to-black/80 pt-12"
+      className="w-full text-center bg-gradient-to-tl from-black/50 via-yellow-500/10 to-black/50 pt-12"
     >
       <div className="max-w-[1240px] mx-auto h-full p-2 flex justify-center items-center">
         <div>

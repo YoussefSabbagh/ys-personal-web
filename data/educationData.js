@@ -7,7 +7,7 @@ const data = [
     dateEnd: '',
     comments:
       'Self-study using different web resources such as edX, Microsoft, Google, and YouTube',
-    image: '/images/illustrations/edu1.svg',
+    image: '/images/illustrations/e1.svg',
   },
   {
     type: 'Formal',
@@ -17,7 +17,7 @@ const data = [
     dateEnd: '1993',
     comments:
       'Specialization in finance, special degree work, valuation of an insurance company',
-    image: '/images/illustrations/education2.svg',
+    image: '/images/illustrations/e2.svg',
   },
   {
     type: 'Formal',
@@ -26,7 +26,7 @@ const data = [
     dateStart: '1978',
     dateEnd: '1985',
     comments: 'Specialization in mathematical models',
-    image: '/images/illustrations/education3.svg',
+    image: '/images/illustrations/e3.svg',
   },
 ];
 

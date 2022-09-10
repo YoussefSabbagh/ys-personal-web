@@ -19,7 +19,7 @@ const Qualification = () => {
   return (
     <section
       id="qualification"
-      className="antialiased text-gray-700 py-12 bg-gradient-to-tr from-black/80 via-yellow-500/20 to-black/80"
+      className="antialiased text-gray-700 py-12 bg-gradient-to-tr from-black/50 via-yellow-500/10 to-black/50"
     >
       <h2 className="title py-4 text-center">Qualification</h2>
       <div className="subtitle py-4 space-x-16 flex justify-center items-center">
