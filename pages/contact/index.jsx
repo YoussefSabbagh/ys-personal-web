@@ -11,7 +11,7 @@ const Contact = () => {
       }}
     >
       <div className="max-w-screen-md mx-auto bg-black/70 p-8 rounded-lg -z-10">
-        <h1 className="text-center title mb-16 text-yellow-700">Contact Us</h1>
+        <h1 className="text-center title mb-16 text-yellow-700">Contact Me</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 text-yellow-700 gap-8">
           <div className=" flex flex-col justify-center">
             <h3 className="text-center subtitle">Let's talk about you</h3>
